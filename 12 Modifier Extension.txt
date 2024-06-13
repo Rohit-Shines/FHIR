@@ -1,0 +1,341 @@
+
+#Example:  "deceasedBoolean": True,
+
+{
+  "resourceType": "Patient",
+  "id": "example",
+  "modifierExtension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-noknownallergies",
+      "valueBoolean": true
+    }
+  ],
+  "identifier": [
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "display": "Medical Record Number"
+          }
+        ]
+      },
+      "system": "http://hospital.smarthealth.org",
+      "value": "123456",
+      "period": {
+        "start": "2020-01-01"
+      },
+      "assigner": {
+        "display": "Smart Health Hospital"
+      }
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": [
+        "John",
+        "A."
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-555-5555",
+      "use": "home"
+    },
+    {
+      "system": "email",
+      "value": "john.doe@example.com",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1980-05-15",
+  "deceasedBoolean": true,
+  "deceasedDateTime": "2023-06-01T14:30:00Z",
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "123 Main St"
+      ],
+      "city": "Somewhere",
+      "state": "CA",
+      "postalCode": "90210",
+      "country": "USA"
+    }
+  ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "code": "M",
+        "display": "Married"
+      }
+    ]
+  },
+  "multipleBirthBoolean": false,
+  "photo": [
+    {
+      "contentType": "image/jpeg",
+      "url": "http://example.org/photos/john-doe.jpg"
+    }
+  ],
+  "contact": [
+    {
+      "relationship": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "code": "N",
+              "display": "Next of Kin"
+            }
+          ]
+        }
+      ],
+      "name": {
+        "use": "official",
+        "family": "Doe",
+        "given": [
+          "Jane"
+        ]
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "555-555-5556",
+          "use": "mobile"
+        }
+      ],
+      "address": {
+        "line": [
+          "123 Main St"
+        ],
+        "city": "Somewhere",
+        "state": "CA",
+        "postalCode": "90210",
+        "country": "USA"
+      },
+      "gender": "female",
+      "organization": {
+        "reference": "Organization/1",
+        "display": "Smart Health Hospital"
+      },
+      "period": {
+        "start": "2015-01-01"
+      }
+    }
+  ],
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "en",
+            "display": "English"
+          }
+        ]
+      },
+      "preferred": true
+    }
+  ],
+  "generalPractitioner": [
+    {
+      "reference": "Practitioner/123",
+      "display": "Dr. Jane Smith"
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/1",
+    "display": "Smart Health Hospital"
+  },
+  "link": [
+    {
+      "other": {
+        "reference": "Patient/2",
+        "display": "Jane Doe"
+      },
+      "type": "seealso"
+    }
+  ]
+}
+
+
+
+
+
+#Example:  "deceasedBoolean": false,
+
+{
+  "resourceType": "Patient",
+  "id": "example",
+  "modifierExtension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-noknownallergies",
+      "valueBoolean": true
+    }
+  ],
+  "identifier": [
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "display": "Medical Record Number"
+          }
+        ]
+      },
+      "system": "http://hospital.smarthealth.org",
+      "value": "123456",
+      "period": {
+        "start": "2020-01-01"
+      },
+      "assigner": {
+        "display": "Smart Health Hospital"
+      }
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": [
+        "John",
+        "A."
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-555-5555",
+      "use": "home"
+    },
+    {
+      "system": "email",
+      "value": "john.doe@example.com",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1980-05-15",
+  "deceasedBoolean": false,
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "123 Main St"
+      ],
+      "city": "Somewhere",
+      "state": "CA",
+      "postalCode": "90210",
+      "country": "USA"
+    }
+  ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "code": "M",
+        "display": "Married"
+      }
+    ]
+  },
+  "multipleBirthBoolean": false,
+  "photo": [
+    {
+      "contentType": "image/jpeg",
+      "url": "http://example.org/photos/john-doe.jpg"
+    }
+  ],
+  "contact": [
+    {
+      "relationship": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "code": "N",
+              "display": "Next of Kin"
+            }
+          ]
+        }
+      ],
+      "name": {
+        "use": "official",
+        "family": "Doe",
+        "given": [
+          "Jane"
+        ]
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "555-555-5556",
+          "use": "mobile"
+        }
+      ],
+      "address": {
+        "line": [
+          "123 Main St"
+        ],
+        "city": "Somewhere",
+        "state": "CA",
+        "postalCode": "90210",
+        "country": "USA"
+      },
+      "gender": "female",
+      "organization": {
+        "reference": "Organization/1",
+        "display": "Smart Health Hospital"
+      },
+      "period": {
+        "start": "2015-01-01"
+      }
+    }
+  ],
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "en",
+            "display": "English"
+          }
+        ]
+      },
+      "preferred": true
+    }
+  ],
+  "generalPractitioner": [
+    {
+      "reference": "Practitioner/123",
+      "display": "Dr. Jane Smith"
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/1",
+    "display": "Smart Health Hospital"
+  },
+  "link": [
+    {
+      "other": {
+        "reference": "Patient/2",
+        "display": "Jane Doe"
+      },
+      "type": "seealso"
+    }
+  ]
+}
