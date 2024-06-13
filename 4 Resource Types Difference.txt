@@ -1,0 +1,29 @@
+
+####JSON
+
+{
+  "resourceType": "Patient",
+  "id": "example",
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": [
+        "John"
+      ]
+    }
+  ]
+}
+
+
+###### XML
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="example"/>
+  <name>
+    <use value="official"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+</Patient>
+
