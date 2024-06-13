@@ -1,0 +1,208 @@
+Example 1
+###If we are choosing specific color.
+
+
+{
+  "resourceType": "Patient",
+  "id": "example",
+  "extension": [
+    {
+      "url": "http://example.org/fhir/StructureDefinition/patient-favorite-color",
+      "valueString": "blue"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "famILY": "DOE",
+      "GIVEN": [
+        "JOHN"
+      ]
+    }
+  ]
+}
+
+
+Example 2
+##A Practitioner resource might need to include details about additional certifications
+ that are not covered by the standard fields.
+
+
+{
+  "resourceType": "Practitioner",
+  "id": "example",
+  "extension": [
+    {
+      "url": "http://example.org/fhir/StructureDefinition/practitioner-additional-certification",
+      "valueString": "Certified Diabetes Educator"
+    }
+  ],
+  "name": {
+    "family": "Smith",
+    "given": [
+      "Jane"
+    ]
+  }
+}
+
+
+Example 3
+### Adding Health Goals to CarePlan Resource
+
+{
+  "resourceType": "CarePlan",
+  "id": "example",
+  "extension": [
+    {
+      "url": "http://example.org/fhir/StructureDefinition/careplan-health-goal",
+      "valueString": "Reduce blood pressure to below 140/90 mmHg"
+    }
+  ],
+  "status": "active",
+  "intent": "plan",
+  "title": "Hypertension Management Plan",
+  "subject": {
+    "reference": "Patient/example"
+  }
+}
+
+
+
+
+Example 4: Including Clinical Trial Information in Patient Resource
+For patients participating in clinical trials, it can be useful to include trial-specific information.
+
+{
+  "resourceType": "Patient",
+  "id": "example",
+  "extension": [
+    {
+      "url": "http://example.org/fhir/StructureDefinition/patient-clinical-trial",
+      "valueReference": {
+        "reference": "ResearchStudy/123"
+      }
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Brown",
+      "given": [
+        "Emily"
+      ]
+    }
+  ]
+}
+
+
+Example 5: Adding Medication Administration Route to MedicationRequest
+The route of administration for a medication (e.g., oral, intravenous) is crucial for treatment plans.
+{
+  "resourceType": "MedicationRequest",
+  "id": "example",
+  "extension": [
+    {
+      "url": "http://example.org/fhir/StructureDefinition/medication-administration-route",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+            "code": "PO",
+            "display": "Oral"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1049627",
+        "display": "Atorvastatin 10mg tablet"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "dosageInstruction": [
+    {
+      "text": "Take one tablet daily",
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+            "code": "PO",
+            "display": "Oral"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+
+Example 6: Including Surgical History in Condition Resource
+To provide a comprehensive view of a patient's condition, surgical history can be added to the Condition resource.
+
+{
+  "resourceType": "Condition",
+  "id": "example",
+  "extension": [
+    {
+      "url": "http://example.org/fhir/StructureDefinition/condition-surgical-history",
+      "valueString": "Appendectomy in 2010"
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "123456",
+        "display": "Hypertension"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "onsetDateTime": "2024-01-01T00:00:00Z"
+}
