@@ -1,0 +1,40 @@
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "use": "old ",
+      "value": "1237823773232"
+    },
+    {
+      "use": "old ",
+      "value": "1237823773232"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "nickname",
+      "text": "Tendulker",
+      "family": "sachin",
+      "given": "Little Master"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone ",
+      "value": "9876543219",
+      "use": "work",
+      "rank": "1"
+    },
+    {
+      "system": "email  ",
+      "value": "abcd@gmail.com",
+      "use": "home",
+      "rank": "2"
+    }
+  ],
+  "gender": "other",
+  "birthDate": "1905-08-23",
+  "deceasedBoolean": "true ",
+  "deceasedDateTime": "2015-02-07T13:28:17-05:00"
+}
