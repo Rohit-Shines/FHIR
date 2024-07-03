@@ -1,0 +1,33 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": "Tendulkar",
+      "given": [
+        "Sachin",
+        "Ramesh"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "022-555-8765",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1973-04-24",
+  "address": [
+    {
+      "use": "home",
+      "text": "789 Master Blaster Lane Mumbai, MH 400002",
+      "line": [
+        "789 Master Blaster Lane"
+      ],
+      "city": "Mumbai",
+      "state": "MH",
+      "postalCode": "400002"
+    }
+  ]
+}

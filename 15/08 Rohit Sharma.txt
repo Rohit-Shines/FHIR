@@ -1,0 +1,33 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": "Sharma",
+      "given": [
+        "Rohit",
+        "Gurunath"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "022-555-5678",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1987-04-30",
+  "address": [
+    {
+      "use": "home",
+      "text": "456 Boundary Road Mumbai, MH 400001",
+      "line": [
+        "456 Boundary Road"
+      ],
+      "city": "Mumbai",
+      "state": "MH",
+      "postalCode": "400001"
+    }
+  ]
+}

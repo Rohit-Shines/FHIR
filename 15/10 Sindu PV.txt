@@ -1,0 +1,30 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": "Sindhu",
+      "given": [
+        "Pusarla",
+        "Venkata"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "040-555-1234",
+      "use": "home"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1995-07-05",
+  "address": [
+    {
+      "use": "home",
+      "text": "123 Badminton Lane Hyderabad, TS 500001",
+      "line": [
+        "123 Badminton Lane"
+      ],
+      "city": "Hyderabad",
+      "state": "TS",
+     

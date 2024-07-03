@@ -1,0 +1,33 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": "Williams",
+      "given": [
+        "Serena",
+        "Jameka"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "310-555-7890",
+      "use": "home"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1981-09-26",
+  "address": [
+    {
+      "use": "home",
+      "text": "789 Champion Lane Beverly Hills, CA 90210",
+      "line": [
+        "789 Champion Lane"
+      ],
+      "city": "Beverly Hills",
+      "state": "CA",
+      "postalCode": "90210"
+    }
+  ]
+}

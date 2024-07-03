@@ -1,0 +1,32 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": "Ronaldo",
+      "given": [
+        "Cristiano"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "212-555-5432",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1985-02-05",
+  "address": [
+    {
+      "use": "home",
+      "text": "654 Goal Avenue Lisbon, Portugal 1000",
+      "line": [
+        "654 Goal Avenue"
+      ],
+      "city": "Lisbon",
+      "state": "LI",
+      "postalCode": "1000"
+    }
+  ]
+}

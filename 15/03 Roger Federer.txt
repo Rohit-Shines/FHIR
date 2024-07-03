@@ -1,0 +1,32 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": "Federer",
+      "given": [
+        "Roger"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "415-555-2345",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1981-08-08",
+  "address": [
+    {
+      "use": "home",
+      "text": "321 Swiss Court Basel, Switzerland 4052",
+      "line": [
+        "321 Swiss Court"
+      ],
+      "city": "Basel",
+      "state": "BS",
+      "postalCode": "4052"
+    }
+  ]
+}

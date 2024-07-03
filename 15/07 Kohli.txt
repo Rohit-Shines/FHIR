@@ -1,0 +1,32 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": "Kohli",
+      "given": [
+        "Virat"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "011-555-1234",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1988-11-05",
+  "address": [
+    {
+      "use": "home",
+      "text": "123 Cricket Street New Delhi, DL 110001",
+      "line": [
+        "123 Cricket Street"
+      ],
+      "city": "New Delhi",
+      "state": "DL",
+      "postalCode": "110001"
+    }
+  ]
+}

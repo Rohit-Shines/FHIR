@@ -1,0 +1,32 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": "Nadal",
+      "given": [
+        "Rafael"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "34-555-8765",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1986-06-03",
+  "address": [
+    {
+      "use": "home",
+      "text": "456 Clay Court Manacor, Spain 07500",
+      "line": [
+        "456 Clay Court"
+      ],
+      "city": "Manacor",
+      "state": "ML",
+      "postalCode": "07500"
+    }
+  ]
+}
