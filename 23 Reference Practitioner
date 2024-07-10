@@ -1,0 +1,101 @@
+{
+  "resourceType": "Practitioner",
+  "identifier": [
+    {
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "PRN",
+            "display": "Provider number"
+          }
+        ]
+      },
+      "system": "http://hospital.smarthealth.org/practitioners",
+      "value": "789012"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Mandela",
+      "given": [
+        "Nelson",
+        "R"
+      ],
+      "prefix": [
+        "Dr."
+      ],
+      "suffix": [
+        "MD"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+1-555-555-6789",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "n.mandela@hospital.smarthealth.org",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "456 Freedom Road"
+      ],
+      "city": "Johannesburg",
+      "state": "GP",
+      "postalCode": "2001",
+      "country": "South Africa"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1918-07-18",
+  "qualification": [
+    {
+      "identifier": [
+        {
+          "system": "http://example.org/licenses",
+          "value": "MD67890"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0360/2.7",
+            "code": "MD",
+            "display": "Doctor of Medicine"
+          }
+        ]
+      },
+      "period": {
+        "start": "1951-12-10"
+      },
+      "issuer": {
+        "display": "South African Medical Board"
+      }
+    }
+  ],
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "en",
+            "display": "English"
+          }
+        ],
+        "text": "English"
+      }
+    }
+  ]
+}
