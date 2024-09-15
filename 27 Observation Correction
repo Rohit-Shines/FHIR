@@ -141,11 +141,11 @@
           ]
         },
         "subject": {
-          "reference": "urn:uuid:example-patient"
+          "reference": "Patient/44996578"
         },
         "performer": [
           {
-            "reference": "urn:uuid:example-practitioner"
+            "reference": "Practitioner/44996579"
           }
         ],
         "effectiveDateTime": "2024-09-15T08:30:00Z",
