@@ -3,17 +3,9 @@
   "type": "batch",
   "entry": [
     {
-      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/44996586",
       "resource": {
         "resourceType": "Patient",
         "id": "44996586",
-        "identifier": [
-          {
-            "use": "usual",
-            "system": "http://hospital.smarthealth.org",
-            "value": "67890"
-          }
-        ],
         "name": [
           {
             "use": "official",
@@ -30,17 +22,9 @@
       }
     },
     {
-      "fullUrl": "https://hapi.fhir.org/baseR4/Practitioner/44996587",
       "resource": {
         "resourceType": "Practitioner",
         "id": "44996587",
-        "identifier": [
-          {
-            "use": "official",
-            "system": "http://hospital.smarthealth.org",
-            "value": "PR456"
-          }
-        ],
         "name": [
           {
             "family": "Savetheearth",
@@ -55,21 +39,10 @@
       }
     },
     {
-      "fullUrl": "https://hapi.fhir.org/baseR4/Observation/44996588",
       "resource": {
         "resourceType": "Observation",
         "id": "44996588",
         "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "vital-signs"
-              }
-            ]
-          }
-        ],
         "code": {
           "coding": [
             {
@@ -78,7 +51,7 @@
               "display": "Body Weight"
             }
           ]
-        ],
+        },
         "subject": {
           "reference": "Patient/44996586"
         },
@@ -87,29 +60,12 @@
             "reference": "Practitioner/44996587"
           }
         ],
-        "effectiveDateTime": "2024-09-15T08:30:00Z",
         "valueQuantity": {
           "value": 5000,
           "unit": "kg",
           "system": "http://unitsofmeasure.org",
           "code": "kg"
-        },
-        "interpretation": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-                "code": "A",
-                "display": "Abnormal"
-              }
-            ]
-          }
-        ],
-        "note": [
-          {
-            "text": "This weight is extremely abnormal."
-          }
-        ]
+        }
       },
       "request": {
         "method": "PUT",
