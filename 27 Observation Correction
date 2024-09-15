@@ -1,0 +1,284 @@
+####POst####
+
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:example-patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "example",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://hospital.smarthealth.org",
+            "value": "67890"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Gandhi",
+            "given": ["Mohandas"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 12345 67890",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "gandhi@example.org",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1869-10-02",
+        "address": [
+          {
+            "use": "home",
+            "line": ["1 Peace Street"],
+            "city": "Porbandar",
+            "state": "Gujarat",
+            "postalCode": "360575",
+            "country": "India"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "Married"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:example-practitioner",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "example-practitioner",
+        "identifier": [
+          {
+            "use": "official",
+            "system": "http://hospital.smarthealth.org",
+            "value": "PR456"
+          }
+        ],
+        "name": [
+          {
+            "family": "Nehru",
+            "given": ["Jawaharlal"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 98765 43210",
+            "use": "work"
+          }
+        ],
+        "gender": "male",
+        "qualification": [
+          {
+            "identifier": [
+              {
+                "system": "http://hospital.smarthealth.org/qualifications",
+                "value": "MD12345"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0360",
+                  "code": "MD",
+                  "display": "Medical Doctor"
+                }
+              ]
+            },
+            "issuer": {
+              "display": "National Medical Board"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:example-observation",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:example-patient"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:example-practitioner"
+          }
+        ],
+        "effectiveDateTime": "2024-09-15T08:30:00Z",
+        "valueQuantity": {
+          "value": 70,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Patient's weight is within normal range."
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+#############Responce#####
+
+{
+	"resourceType": "Bundle",
+	"id": "91a54d1e-9142-4bb1-a7ed-414b682567c2",
+	"type": "batch-response",
+	"link": [
+		{
+			"relation": "self",
+			"url": "https://hapi.fhir.org/baseR4"
+		}
+	],
+	"entry": [
+		{
+			"response": {
+				"status": "201 Created",
+				"location": "Patient/44996578/_history/1",
+				"etag": "1",
+				"lastModified": "2024-09-15T21:30:04.061+00:00",
+				"outcome": {
+					"resourceType": "OperationOutcome",
+					"text": {
+						"status": "generated",
+						"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Patient/44996578/_history/1&quot;. Took 29ms.</td></tr></table></div>"
+					},
+					"issue": [
+						{
+							"severity": "information",
+							"code": "informational",
+							"details": {
+								"coding": [
+									{
+										"system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+										"code": "SUCCESSFUL_CREATE",
+										"display": "Create succeeded."
+									}
+								]
+							},
+							"diagnostics": "Successfully created resource \"Patient/44996578/_history/1\". Took 29ms."
+						}
+					]
+				}
+			}
+		},
+		{
+			"response": {
+				"status": "201 Created",
+				"location": "Practitioner/44996579/_history/1",
+				"etag": "1",
+				"lastModified": "2024-09-15T21:30:04.275+00:00",
+				"outcome": {
+					"resourceType": "OperationOutcome",
+					"text": {
+						"status": "generated",
+						"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Practitioner/44996579/_history/1&quot;. Took 1ms.</td></tr></table></div>"
+					},
+					"issue": [
+						{
+							"severity": "information",
+							"code": "informational",
+							"details": {
+								"coding": [
+									{
+										"system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+										"code": "SUCCESSFUL_CREATE",
+										"display": "Create succeeded."
+									}
+								]
+							},
+							"diagnostics": "Successfully created resource \"Practitioner/44996579/_history/1\". Took 1ms."
+						}
+					]
+				}
+			}
+		},
+		{
+			"response": {
+				"status": "400 Bad Request",
+				"outcome": {
+					"resourceType": "OperationOutcome",
+					"text": {
+						"status": "generated",
+						"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">ERROR</td><td>[]</td><td>HAPI-0541: Unable to satisfy placeholder ID urn:uuid:example-patient found in element named 'subject' within resource of type: Observation</td></tr></table></div>"
+					},
+					"issue": [
+						{
+							"severity": "error",
+							"code": "exception",
+							"diagnostics": "HAPI-0541: Unable to satisfy placeholder ID urn:uuid:example-patient found in element named 'subject' within resource of type: Observation"
+						}
+					]
+				}
+			}
+		}
+	]
+}
