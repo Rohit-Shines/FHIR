@@ -1,3 +1,5 @@
+####POst####
+
 {
   "resourceType": "Bundle",
   "type": "batch",
@@ -176,4 +178,107 @@
       }
     }
   ]
+}
+
+
+
+
+
+
+
+#############Responce#####
+
+{
+	"resourceType": "Bundle",
+	"id": "91a54d1e-9142-4bb1-a7ed-414b682567c2",
+	"type": "batch-response",
+	"link": [
+		{
+			"relation": "self",
+			"url": "https://hapi.fhir.org/baseR4"
+		}
+	],
+	"entry": [
+		{
+			"response": {
+				"status": "201 Created",
+				"location": "Patient/44996578/_history/1",
+				"etag": "1",
+				"lastModified": "2024-09-15T21:30:04.061+00:00",
+				"outcome": {
+					"resourceType": "OperationOutcome",
+					"text": {
+						"status": "generated",
+						"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Patient/44996578/_history/1&quot;. Took 29ms.</td></tr></table></div>"
+					},
+					"issue": [
+						{
+							"severity": "information",
+							"code": "informational",
+							"details": {
+								"coding": [
+									{
+										"system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+										"code": "SUCCESSFUL_CREATE",
+										"display": "Create succeeded."
+									}
+								]
+							},
+							"diagnostics": "Successfully created resource \"Patient/44996578/_history/1\". Took 29ms."
+						}
+					]
+				}
+			}
+		},
+		{
+			"response": {
+				"status": "201 Created",
+				"location": "Practitioner/44996579/_history/1",
+				"etag": "1",
+				"lastModified": "2024-09-15T21:30:04.275+00:00",
+				"outcome": {
+					"resourceType": "OperationOutcome",
+					"text": {
+						"status": "generated",
+						"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Practitioner/44996579/_history/1&quot;. Took 1ms.</td></tr></table></div>"
+					},
+					"issue": [
+						{
+							"severity": "information",
+							"code": "informational",
+							"details": {
+								"coding": [
+									{
+										"system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+										"code": "SUCCESSFUL_CREATE",
+										"display": "Create succeeded."
+									}
+								]
+							},
+							"diagnostics": "Successfully created resource \"Practitioner/44996579/_history/1\". Took 1ms."
+						}
+					]
+				}
+			}
+		},
+		{
+			"response": {
+				"status": "400 Bad Request",
+				"outcome": {
+					"resourceType": "OperationOutcome",
+					"text": {
+						"status": "generated",
+						"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">ERROR</td><td>[]</td><td>HAPI-0541: Unable to satisfy placeholder ID urn:uuid:example-patient found in element named 'subject' within resource of type: Observation</td></tr></table></div>"
+					},
+					"issue": [
+						{
+							"severity": "error",
+							"code": "exception",
+							"diagnostics": "HAPI-0541: Unable to satisfy placeholder ID urn:uuid:example-patient found in element named 'subject' within resource of type: Observation"
+						}
+					]
+				}
+			}
+		}
+	]
 }
