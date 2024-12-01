@@ -1,0 +1,30 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "http://sportsdata.org/mrn",
+            "value": "VK54321"
+          }
+        ],
+        "name": [
+          {
+            "family": "Kohli",
+            "given": ["Virat"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-11-05"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient",
+        "ifNoneExist": "identifier=http://sportsdata.org/mrn|VK54321"
+      }
+    }
+  ]
+}
