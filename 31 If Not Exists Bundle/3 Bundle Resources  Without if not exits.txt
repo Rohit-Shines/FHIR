@@ -1,0 +1,121 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "http://sportsdata.org/mrn",
+            "value": "FP12345"
+          }
+        ],
+        "name": [
+          {
+            "family": "Messi",
+            "given": ["Lionel"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1987-06-24"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "http://sportsdata.org/mrn",
+            "value": "FP67890"
+          }
+        ],
+        "name": [
+          {
+            "family": "Ronaldo",
+            "given": ["Cristiano"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1985-02-05"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "http://sportsdata.org/mrn",
+            "value": "FP11111"
+          }
+        ],
+        "name": [
+          {
+            "family": "Mbappé",
+            "given": ["Kylian"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1998-12-20"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "http://sportsdata.org/mrn",
+            "value": "FP22222"
+          }
+        ],
+        "name": [
+          {
+            "family": "Neymar",
+            "given": ["Junior"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1992-02-05"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "http://sportsdata.org/mrn",
+            "value": "FP33333"
+          }
+        ],
+        "name": [
+          {
+            "family": "Haaland",
+            "given": ["Erling"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2000-07-21"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    }
+  ]
+}
